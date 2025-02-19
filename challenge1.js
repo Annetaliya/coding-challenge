@@ -10,7 +10,7 @@
 //step2: get the everage
 // stept 3: get the highest temp
 // step : get the lowest temp
-const DAYS = 7;
+
 const tempRecords = {
     records: [],
     getTemperature(temp) {
@@ -48,6 +48,8 @@ const tempRecords = {
         
     }
 };
+
+
 console.log(tempRecords.getTemperature(24))
 console.log(tempRecords.getTemperature(30))
 console.log(tempRecords.getTemperature(32))
@@ -58,3 +60,12 @@ console.log(tempRecords.getTemperature(28))
 console.log(tempRecords.getAverage());
 console.log(tempRecords.getHighestTemp());
 console.log(tempRecords.getLowestTemperatures());
+
+
+
+
+
+
+
+
+
