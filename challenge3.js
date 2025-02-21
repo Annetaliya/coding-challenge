@@ -15,15 +15,24 @@ function List() {
     function addData(element) {
         this.dataStore.push(element);
         this.listSize++;
+        return this.dataStore
     }
     function findData(element) {
-        const found = this.addData.indexOf(element);
+        const found = this.dataStore.indexOf(element);
         return found;
     }
     function removeData() {
-        this.addData.splice(found, 1);
-        this.listSize -1;
+        this.dataStore.splice(found, 1);
+        this.listSize - 1;
+        return this.dataStore;
     }
     
 
 }
+const createData = new List();
+console.log(createData.addData('John'));
+console.log(createData.addData('Mary'));
+console.log(createData.addData('Bruce'));
+console.log(createData.listSize)
+console.log(createData.findData('Mary'))
+console.log(createData.removeData())
