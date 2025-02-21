@@ -5,7 +5,7 @@
 function leapYear(arr) {
     const newArray = []
     for (let i = 0; i < arr.length; i++) {
-        if (arr[i] % 4 === 0 && arr[i] % 100 !== 0) {
+        if (arr[i] % 4 === 0) {
             newArray.push(arr[i])
         } else {
             continue

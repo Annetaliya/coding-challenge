@@ -19,12 +19,17 @@ function List() {
     }
     function findData(element) {
         const found = this.dataStore.indexOf(element);
-        return found;
+        if (found > 0) {
+            return found
+        }
+        return -1;
     }
-    function removeData() {
-        this.dataStore.splice(found, 1);
-        this.listSize - 1;
+    function removeData(element) {
+        const foundAt = this.findData(element)
+        this.dataStore.splice(foundAt, 1);
+        this.listSize--;
         return this.dataStore;
+        
     }
     
 
@@ -33,6 +38,5 @@ const createData = new List();
 console.log(createData.addData('John'));
 console.log(createData.addData('Mary'));
 console.log(createData.addData('Bruce'));
-console.log(createData.listSize)
-console.log(createData.findData('Mary'))
-console.log(createData.removeData())
+
+console.log(createData.removeData('Mary'))
