@@ -12,16 +12,8 @@ function combineArray(array1, array2) {
     }
 
     const newArray = array1.concat(array2);
-    const result = []
-    for (let i = 0; i < newArray.length; i++) {
-        for (let j = i + 1; j < newArray.length; j++) {
-            if (newArray[i] !== newArray[j]) {
-                if (!result.includes(newArray[i])) {
-                    result.push(newArray[i])
-                }
-            }
-        }
-    }
+    const result = newArray.filter((item, index) => newArray.indexOf(item) === index)
+   
     return result
 }
 console.log(combineArray([1, 2, 3], [100, 2, 1, 10]))
