@@ -20,17 +20,25 @@ function List() {
         return this.dataStore
     }
 
+    // function insertAtIndex(index, element) {
+    //     if (this.listSize === 0) {
+    //         index = this.dataStore.length
+    //         this.dataStore.splice(index, 0, element);
+    //         this.listSize++;
+    //         return this.dataStore
+    //     }
+
+    //     this.dataStore.splice(index, 0, element);
+    //     this.listSize++;
+    //     return this.dataStore;
+    // }
     function insertAtIndex(index, element) {
-        if (this.listSize === 0) {
-            index = this.dataStore.length
-            this.dataStore.splice(index, 0, element);
-            this.listSize++;
-            return this.dataStore
+        if (index < 0 || index > this.dataStore.length ) {
+            console.log("invalid index");
+            return;
         }
 
         this.dataStore.splice(index, 0, element);
-        this.listSize++;
-        return this.dataStore;
     }
     //     if (index > this.listSize) {
     //         index = this.listSize;
