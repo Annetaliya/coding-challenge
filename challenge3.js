@@ -22,7 +22,9 @@ function List() {
 
     function insertAtIndex(index, element) {
         if (this.listSize === 0) {
-            this.dataStore.splice(this.dataStore.length, 0, element);
+            index = this.dataStore.length
+            this.dataStore.splice(index, 0, element);
+            this.listSize++;
             return this.dataStore
         }
 
