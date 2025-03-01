@@ -16,10 +16,8 @@ Output: 2, 3
 function findSumIndex(array, target) {
     const indices = []
     for (let i = 0; i < array.length; i++) {
-        for (let j = i + 1; j < array.length; j++) {
-            if (array[i] + array[j] === target) {
-                return [i, j]
-            }
+        if (array[i] + array[i + 1] === target){
+            return [i, i + 1]
         }
     }
     return null;
