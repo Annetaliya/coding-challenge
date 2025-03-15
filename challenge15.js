@@ -13,12 +13,14 @@ function camelize(str) {
         return 'Invalid Input'
     }
     const newStr = str.split('-');
+
+    
     const result = newStr.map((element, index) => {
        return index === 0 ? element : element[0].toUpperCase() + element.slice(1)
     })
     return result.join('')
    
-    
+
    
 }
 console.log(camelize("list-style-image"))
