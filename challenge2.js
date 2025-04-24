@@ -16,4 +16,13 @@ function insertElement(array) {
     }
     return array.join('')
 }
+
+function insertdash(array) {
+    for (let i = 0; i < array.length; i++) {
+        if (array[i] % 2 === 0) {
+            array[i] += '-'
+        }
+    }
+    return array.join('')
+}
 console.log(insertElement([0, 2, 5, 4, 6, 8]))

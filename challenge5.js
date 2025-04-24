@@ -14,4 +14,14 @@ function leapYear(arr) {
     return newArray;
 }
 
-console.log(leapYear([1992, 1990, 1996,1993, 2024]))
+function findLeapYear(array) {
+    let newArray = []
+    for (let i = 0; i < array.length; i++){
+        if (array[i] % 4 === 0) {
+            newArray.push(array[i])
+        }
+    }
+    return newArray
+}
+
+console.log(findLeapYear([1992, 1990, 1996,1993, 2024]))
