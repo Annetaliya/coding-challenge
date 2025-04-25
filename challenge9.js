@@ -13,4 +13,9 @@ function remove_array_element(array, element) {
     return array
 }
 
-console.log(remove_array_element([2, 5, 9, 6], 5));
+function remove(array, element) {
+    const result = array.filter((item) => item !== element)
+    return result
+}
+
+console.log(remove([2, 5, 9, 6], 5));

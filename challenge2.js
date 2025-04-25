@@ -19,7 +19,7 @@ function insertElement(array) {
 
 function insertdash(array) {
     for (let i = 0; i < array.length; i++) {
-        if (array[i] % 2 === 0) {
+        if (array[i] % 2 === 0 && array[i + 1] % 2 === 0) {
             array[i] += '-'
         }
     }

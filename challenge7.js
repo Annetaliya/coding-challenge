@@ -17,4 +17,15 @@ function sumElements (array1, array2) {
 
 }
 
-console.log(sumElements([1,0,2,3,4],[4, 5, 8, 10, 12, 13]))
+function sumArray(array1, array2) {
+    const resultArray = [];
+    const len  = Math.max(array1.length, array2.length)
+    for (let i = 0; i < len; i++) {
+        let sum = (array1[i] || 0) + (array2[i] || 0)
+        resultArray.push(sum)
+       
+    }
+    return resultArray
+}
+
+console.log(sumArray([1,0,2,3,4],[4, 5, 8, 10, 12, 13]))
