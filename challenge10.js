@@ -23,5 +23,14 @@ function findSumIndex(array, target) {
     return null;
     
 }
+ function getSum(array, target) {
+    const indices = []
+    for (let i = 0; i < array.length; i++) {
+        if (array[i] + array[i + 1] === target) {
+            indices.push(i, i + 1)
+        }
 
-console.log(findSumIndex([10,20,10,40,50,60,70], 50))
+    }
+    return indices
+ }
+console.log(getSum([10,20,10,40,50,60,70], 50))
