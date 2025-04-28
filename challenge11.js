@@ -10,5 +10,7 @@ function contains(array, element) {
         return true
     }
 }
-
-console.log(contains([2, 5, 9, 6], 5))
+function findElement(array, element) {
+    return array.includes(element)
+}
+console.log(findElement([2, 5, 9, 6], 3))
