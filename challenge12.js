@@ -18,4 +18,8 @@ function truncate_string(str,num) {
     const newStr = str.slice(0, num);
     return newStr
 }
-console.log(truncate_string("Robin Singh",4))
+
+function removeItems(str, num) {
+    return str.slice(0, num)
+}
+console.log(removeItems("Robin Singh",4))
