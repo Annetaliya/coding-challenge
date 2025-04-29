@@ -11,4 +11,13 @@ function string_parameterize(str) {
     return array.join('-')
 
 }
-console.log(string_parameterize("Robin Singh from USA."));
+
+function stringConvert(str) {
+    let newstr = '';
+    for (let i = 0; i < str.length; i++) {
+        newstr += str[i].toLowerCase().replace(' ', '-')
+    }
+    return newstr
+}
+console.log(stringConvert("Robin Singh from USA."));
+

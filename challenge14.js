@@ -13,4 +13,13 @@ function abbrev_name(str) {
     return `${firstString} ${newAbbrv}.`
 
 }
-console.log(abbrev_name("Robin Singh"));
+
+function abbrev(str) {
+    const newStr = str.split(' ');
+    let firstStr = newStr[0];
+    const secondStr = newStr[1];
+    const singleChar = secondStr.slice(0,1)
+    
+    return  `${firstStr} ${singleChar}`
+}
+console.log(abbrev("Robin Singh"));
