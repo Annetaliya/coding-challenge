@@ -13,4 +13,13 @@ function contains(array, element) {
 function findElement(array, element) {
     return array.includes(element)
 }
-console.log(findElement([2, 5, 9, 6], 3))
+
+function isPresent(arr, n) {
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] === n) {
+            return true
+        } 
+    }
+    return false
+}
+console.log(isPresent([2, 5, 9, 6], 5))
