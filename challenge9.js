@@ -18,4 +18,17 @@ function remove(array, element) {
     return result
 }
 
-console.log(remove([2, 5, 9, 6], 5));
+function removeElement(arr, element) {
+    let result = [];
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] === element) {
+            
+            continue
+            
+        }
+        result.push(arr[i])
+    }
+    return result
+}
+
+console.log(removeElement([2, 5, 9, 6], 5));
