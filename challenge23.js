@@ -12,5 +12,8 @@ Expected Output :
 function joinElements(arr) {
     console.log(arr.join())
     console.log(arr.join('+'))
+    for(let i = 0; i < arr.length; i++) {
+        
+    }
 }
 joinElements(["Red", "Green", "White", "Black"])
