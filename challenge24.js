@@ -12,13 +12,14 @@ function removeDuplicates(arr){
 function duplicateRemove(arr) {
     let result = [];
     for (let i = 0; i < arr.length; i++) {
-        if (arr.indexOf(arr[i] == i)){
-            continue
-            
+        for (let j = i + 1; j < arr.length; j++) {
+            if (arr[i] !== arr[j]){
+                if (!result.includes(arr[i])){
+                    result.push(arr[i])
+                }
+            }
         }
-        result.push(arr[i])
-
-      
+        
     }
     return result
 }
