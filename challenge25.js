@@ -40,4 +40,23 @@ function commonOccurence(arr) {
     return obj
 }
 
-console.log(commonOccurence([3, 'a', 'a', 'a', 2, 3, 'a', 3, 'a', 2, 4, 9, 3]))
+// method 3 using hash maps 
+function mostFrequentItem(arr) {
+    const frequencyMap = {};
+    let maxFreq = 0;
+    let mostFrequentItem;
+
+    for (let i = 0; i < arr.length; i++) {
+        const item = arr[i];
+        frequencyMap[item] = (frequencyMap[item] || 0) + 1
+
+        if (frequencyMap[item] > maxFreq) {
+            maxFreq = frequencyMap[item]
+            mostFrequentItem = item
+        }
+
+    }
+    return `${mostFrequentItem} (${maxFreq} times)`
+}
+
+console.log(mostFrequentItem([3, 'a', 'a', 'a', 2, 3, 'a', 3, 'a', 2, 4, 9, 3]))
