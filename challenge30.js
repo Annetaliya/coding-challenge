@@ -21,4 +21,18 @@ function findSumOfIndex(array1, array2) {
     }
     return result;
 }
-console.log(findSumOfIndex([1,0,2,3,4],[3,5,6,7,8,13] ))
+
+function sumOfArrays(arr1, arr2) {
+    let result = [];
+    let len = Math.max(arr1.length, arr2.length)
+
+    for (let i = 0; i < len; i++) {
+        let sum = (arr1[i] || 0) + (arr2[i] || 0)
+        result.push(sum)
+
+    }
+    return result;
+}
+//console.log(findSumOfIndex([1,0,2,3,4],[3,5,6,7,8,13] ))
+
+console.log(sumOfArrays([1,0,2,3,4],[3,5,6,7,8,13]))
