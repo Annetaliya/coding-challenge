@@ -38,9 +38,26 @@ function findLeadingElements(arr) {
             maximum = newArray[i]
         }
     }
-    
+
     result = [max, maximum, newArray[len -1]]
     //result.push(max)
     return result;
 }
-console.log(findLeadingElements( [1, 2, 3, 4, 5, 2]))
+
+///\ method 2
+
+function leader(arr) {
+    let result = [];
+    let maxRight = arr[arr.length - 1]
+
+    result.push(maxRight)
+
+    for (let i = arr.length -2; i >= 0; i--) {
+        if (arr[i] >= maxRight) {
+            maxRight = arr[i]
+            result.push(maxRight)
+        }
+    }
+    return result.reverse();
+}
+console.log(leader( [1, 2, 3, 4, 5, 2]))
