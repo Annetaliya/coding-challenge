@@ -36,4 +36,4 @@ function findSecondLargestElement(arr) {
     }
     return secondLargest;
 }
-console.log(findSecondLargestElement([12, 35, 1, 10, 34, 1]))
+console.log(findSecondLargestElement([10, 5, 10]))
