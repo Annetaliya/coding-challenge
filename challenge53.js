@@ -65,4 +65,26 @@ function getSecondLargest(arr) {
     return -1
 }
 
+
+function secondLargestFound(arr) {
+    const n = arr.length;
+
+    let largest = -1;
+    let secondLargest = -1;
+
+    for( let i =0; i < n; i++) {
+        if (arr[i] > largest) {
+            largest = arr[i]
+
+        }
+    }
+
+    for (let i = 0; i < n; i++) {
+        if (arr[i] > secondLargest && arr[i] !== largest) {
+            secondLargest = arr[i]
+        }
+    }
+    return secondLargest
+}
+
 console.log(getSecondLargest([10, 5, 10]))
