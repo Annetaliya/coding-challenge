@@ -5,6 +5,7 @@ function secondLargest(arr) {
         return a-b
     }
     arr.sort(toSort)
+    
     const n = arr.length;
 
     // for (let i = 0; i < arr.length; i++) {
@@ -12,4 +13,4 @@ function secondLargest(arr) {
     // }
     return arr[n-2]
 } 
-console.log(secondLargest([10,7,1,3]))
+console.log(secondLargest([10, 5, 10]))
