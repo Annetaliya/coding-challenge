@@ -20,12 +20,11 @@ function secondLargest(arr) {
     function toSort(a,b) {
         return a - b;
     }
-    arr.sort(toSort)
-
+    arr.sort(toSort);
     const n = arr.length;
-    const largest = arr[n - 1]
+    const largest = arr[n-1];
 
-    for (let i = n - 2; i > 0; i--) {
+    for (let i = n - 2; i >= 0; i--) {
         if (arr[i] < largest) {
             return arr[i]
         }
@@ -36,4 +35,4 @@ function secondLargest(arr) {
 
 }
 
-console.log(secondLargest([10, 10, 10]))
+console.log(secondLargest([12, 35, 1, 10, 34, 1]))
