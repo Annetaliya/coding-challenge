@@ -6,17 +6,18 @@
  */
 
 function reverseSubGroups (arr, k) {
-    const result = []
+    const result = [];
+    const n = arr.length;
+    for (let i = 0; i < n; i += k) {
+        let end = Math.min(i + k -1, n - 1)
 
-    for (let i = 0; i < arr.length; i += k) {
-
-        let end = Math.min(i + k -1, arr.length -1)
         for (let j = end; j >= i; j--) {
             result.push(arr[j])
         }
-
     }
-    return result;
+    return result
+
+    
 
 }
 console.log(reverseSubGroups([1, 2, 3, 4, 5, 6, 7, 8], 3))
