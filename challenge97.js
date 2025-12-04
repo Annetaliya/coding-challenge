@@ -24,7 +24,7 @@ function rightRotate(arr, start, end) {
 function rearrange(arr) {
     let n = arr.length;
     for (let i = 0; i < n; i++) {
-        //check if positive or negative is out of place
+        //check if positive element is out of place
         if (arr[i] >= 0 && i % 2 === 1) {
             for (let j = i+ 1; j < n; j++) {
                 if (arr[j] < 0) {
