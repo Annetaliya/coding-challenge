@@ -18,12 +18,14 @@ function arrayLeader(arr) {
     let end = arr[n -1]
 
     for (let i = 0; i < n; i++){
-        for (let j = i + 1; j < n; j++) {
-            if (arr[i] >= arr[j]) {
-                if (!result.includes(arr[i])) {
-                    result.push(arr[i])
-                }
+        let j;
+        for (j = i + 1; j < n; j++) {
+            if (arr[i] < arr[j]) {
+                break;
             }
+        }
+        if (j === n) {
+            result.push(arr[i])
         }
     }
     return result
